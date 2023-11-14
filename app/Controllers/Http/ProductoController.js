@@ -1,49 +1,55 @@
 'use strict'
 
-const Flavor = use('App/Models/Flavor')
+const Productos = use('App/Models/Producto')
 const { validateAll } = use('Validator')
 
-class FlavorController {
+class ProductoController {
 
   async index ({ request, response }) {
-    return await Flavor.all()
+    return await Productos.all()
   }
 
+//POST
+ 
   async store ({ request, response }) {
     const input = request.all();
 
     // validation
 
-    const validation = await this.validar(input);
+    const validation = await this.validar(input)
 
     if(validation.fails()){
       return validation.messages();
     }
 
-    await Flavor.create(input);
+    await Productos.create(input)
 
     return response.json({
       rer: true,
       message: 'Registro creado'
     })
+  }
 
-  }
+ 
   async show ({ params }) {
-    return await Flavor.findOrFail(params.id);
+    return await Productos.findOrFail(params.id);
   }
+
+
+// PUT
 
   async update ({ params, request, response }) {
     const input = request.all();
 
     // validation
 
-    const validation = await this.validar(input, params.id)
+    const validation = await this.validar(input, params.id);
 
     if(validation.fails()){
       return validation.messages();
     }
 
-    await Flavor.query().where('id', params.id).update(input);
+    await Productos.query().where('id', params.id).update(input);
 
     return response.json({
       rer: true,
@@ -51,9 +57,11 @@ class FlavorController {
     })
   }
 
+//DELETE
+
   async destroy ({ params, response }) {
-    const flavorDelete = await Flavor.findOrFail(params.id);
-    await flavorDelete.delete();
+    const productoDelete = await Productos.findOrFail(params.id);
+    await productoDelete.delete();
     return response.json({
       rer: true,
       message: 'Eliminado correctamente'
@@ -64,9 +72,14 @@ class FlavorController {
   {
     let ruleUpdate = id === null ? '' : ',id,' + id;
     return await validateAll(input, {
-      'flavor' : 'required|min:3|max:20' + ruleUpdate
+      'product_name' : 'required|min:3|max:100',
+      'brand' : 'required|min:3|max:100',
+      'url_img' : 'required|min:3|max:350',
+      'price' : 'required|min:1|max:50',
+      'discount' : 'required|min:1|max:50',
+      
     })
   }
 }
 
-module.exports = FlavorController
+module.exports = ProductoController

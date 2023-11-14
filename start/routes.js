@@ -21,3 +21,4 @@ Route.get('/', () => {
 })
 
 Route.resource('flavors', 'FlavorController').apiOnly()
+Route.resource('productos', 'ProductoController').apiOnly()
