@@ -1,17 +1,17 @@
-Región;Identificador;
-Arica y Parinacota;XV
-Tarapacá;I
-Antofagasta;II
-Atacama;III
-Coquimbo;IV
-Valparaíso;V
-Libertador General Bernardo O'Higgins;VI
-Maule;VII
-Ñuble;XVI
-Biobío;VIII
-Araucanía;IX
-Los Ríos;XIV
-Los Lagos;X
-Aysén del General Carlos Ibáñez del Campo;XI
-Magallanes y de la Antártica Chilena;XII
-Metropolitana de Santiago;RM
+region,identificador
+Arica y Parinacota,XV
+Tarapacá,I
+Antofagasta,II
+Atacama,III
+Coquimbo,IV
+Valparaíso,V
+Libertador General Bernardo O'Higgins,VI
+Maule,VII
+Ñuble,XVI
+Biobío,VIII
+Araucanía,IX
+Los Ríos,XIV
+Los Lagos,X
+Aysén del General Carlos Ibáñez del Campo,XI
+Magallanes y de la Antártica Chilena,XII
+Metropolitana de Santiago,RM
