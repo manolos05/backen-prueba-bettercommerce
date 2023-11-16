@@ -1,28 +1,31 @@
-# Adonis API application
+# Prueba técnica full stack junior Better Commerce Chile
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
+Este arhivo corresponde al Backend como solución a la prueba tecnica para Better creado adonis API.
 
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
-
-## Setup
-
-Use the adonis command to install the blueprint
-
-```bash
-adonis new yardstick --api-only
-```
-
-or manually clone the repo and then run `npm install`.
+1. En cuanto algunas características, se realizaron los 4 endpoint, para esto se diseñaron las tablas para la base de datos las cuales se encuentran en local
+2. Son 4 tablas Flavors, Productos, Regiones y Comunas
+3. En la carpeta database se encuentran las migraciones de estas tablas y la composicion de sus columnas que conforman la base de datos del proyecto.
+4. Dentro de la carpeta data en el root principal se encuentran los archivos CSV los cuales fueron ingresados en la base de dato.
+5. En la carpeta APP se encuentran los modelos y controladores con algunas validaciones. 
+6. dentro de la carpeta START se encuentran las routes
 
 
-### Migrations
+## Instrucciones
 
-Run the following command to run startup migrations.
+Para ejecutar el proyecto:
 
-```js
-adonis migration:run
-```
+1. Instala las dependencias con `npm install`.
+2. Instalar adonis con `npm i -g @adonisjs/cli`.
+3. Instalar la base de datos en este caso `npm i --save sqlite3`.
+4. realizar las migraciones con `adonis migration:run`.
+5. Ejecuta el proyecto con `adonis serve --dev`.
+6. El puerto del navegador para ver el proyecto en el navegador es el http://127.0.0.1:3333/
+
+
+Saludos
+Manuel Salazar
++56949664444
+manusalh@gmail.com
+
+
+
