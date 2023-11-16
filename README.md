@@ -17,9 +17,10 @@ Para ejecutar el proyecto:
 1. Instala las dependencias con `npm install`.
 2. Instalar adonis con `npm i -g @adonisjs/cli`.
 3. Instalar la base de datos en este caso `npm i --save sqlite3`.
-4. realizar las migraciones con `adonis migration:run`.
-5. Ejecuta el proyecto con `adonis serve --dev`.
-6. El puerto del navegador para ver el proyecto en el navegador es el http://127.0.0.1:3333/
+4. Crear app key con el comando `adonis key:generate`
+5. realizar las migraciones con `adonis migration:run`.
+6. Ejecuta el proyecto con `adonis serve --dev`.
+7. El puerto del navegador para ver el proyecto en el navegador es el http://127.0.0.1:3333/
 
 
 Saludos
