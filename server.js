@@ -20,6 +20,6 @@
 const { Ignitor } = require('@adonisjs/ignitor')
 
 new Ignitor(require('@adonisjs/fold'))
-  .appRoot('backend-prueba-bettercommerce')
+  .appRoot(__dirname)
   .fireHttpServer()
   .catch(console.error)
